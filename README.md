@@ -1,11 +1,20 @@
 # Minecraft Miner
 - A simple minecraft auto clicker made to mine cobblestone from cobblestone generators.
 - This simple script holds down the minecraft attack button to go afk when mining cobblestone
-- NOTE: This script is configured to use ('x') as attack, also assumes you have '9' pickaxes, and you are using 'gold' pickaxes
-- If you would like to change this, first step is to change 'pt.keyUp('x') to whatever key you are using as attack in minecraft, (currently mouse is not supported)
-- To change number of pickaxes you have, go to the 'pickaxes' variable located at line '16'
-- For the pickaxe type, it uses speed. 'gold' pickaxe has a speed of 25, and you need to change this based on your pickaxe type!
-- Go to line (25) 'mine_block(25)' and change 25 to whatever attack rate your pickaxe has.
+
+# Changing the configurations
+- This script is configured to use ('x') as attack, also assumes you have '9' pickaxes, and you are using 'gold' pickaxes
+- Enter the (main.py) file to follow the instructions below.
+
+- To change the attack button, head to line 8 (pt.keyUp('x')) and change 'x' to whatever attack key you have set, example: (pt.keyUp('w')).
+- Note: Mouse attack buttons are not yet supported.
+
+- To change how many pickaxes it assumes you have, head to line 11 'pickaxes = 9' and change '9' to whatever amount you have...
+- Note: your pickaxes must be in a row, the script loops through your hands/inventory(only the 9 ones on the main game) and attacks with the item in them.
+- So if any of them aren't pickaxes, it will attack cobblestone with them!
+
+- To change the type of pickaxe it assumes you have, it follows pickaxe attack speed... Head to line 18 (mine_block(25)) and change 25 to the attack speed of your pickaxe
+- Note: 25 is the attack speed of a gold pickaxe
 
 # IMPORTANT NOTE
 - Before following the instructions to run on linux, you must setup a virtual enviroment within the project.
